@@ -1,0 +1,11 @@
+  table {
+      text-align: left;
+      width: 100%;
+      margin: 0 auto;
+  }
+  form {
+      font-family: sans-serif;
+  }
+  #houses {
+      float: right;
+  }

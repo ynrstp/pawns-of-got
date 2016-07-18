@@ -1,0 +1,121 @@
+doctype html
+html(lang='en')
+    head
+        title GoT Status Chart
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', type='text/css', href='css/admin.css')
+        link(rel='stylesheet', type='text/css', href='css/simplegrid.css')
+        link(href='https://fonts.googleapis.com/css?family=Lato:400,100,200,300,500' rel='stylesheet' type='text/css')
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+        script(src='js/admin.js')
+    body
+        .header
+            h1 Pawns in the Great game
+            h3 Admin panel
+            form#authenticate
+                label(for='password' ) Password
+                input(id='password' type='text' name='password')
+                input(type="submit" value="Send")
+                br
+                br
+            .col-1-3
+                h2 New pawn
+                form#newPawn
+                    label(for='name') Name
+                    input(id='name',type='text' placeholder='Jon Snow', name='name')
+                    br
+                    label(for='quote') Quote
+                    input(id='quote',type='text' placeholder='And now my watch has ended', name='quote')
+                    br
+                    label(for='houseOptions') House
+                    select(id='houseOptions' class='houseOptions' name='house')
+                    br
+                    label(for='locationOptions') Location
+                    select(id='locationOptions' class='locationOptions' name='location')
+                    br
+                    label(for='status') Status
+                    select(id='status' name="status")
+                        option(value="Dead") Dead
+                        option(value="Alive") Alive
+                        option(value="Imprisoned") Imprisoned
+                        option(value="UnDead") Undead
+                    br
+                    label(for='avatar') Photo
+                    input(type="file" name="avatar" id="avatar")
+                    br
+                    input(type="submit" value="Add")
+            .col-1-3
+                h2 New location
+                form#newLocation
+                    label(for='name') Name
+                    input(id='name',type='text' placeholder='Meereen', name='name')
+                    br
+                    label(for='location') Photo
+                    input(type="file" name="location" id="location")
+                    br
+                    input(type="submit" value="Add")
+            .col-1-3
+                h2 new house
+                form#newHouse
+                    label(for='name') Name
+                    input(id='name',type='text' placeholder='Stark', name='name')
+                    br
+                    label(for='house') Photo
+                    input(type="file" name="house" id="house")
+                    br
+                    input(type="submit" value="Add")
+            .col-1-1
+            .col-1-2
+                h2 Locations
+                table#locations
+                    thead
+                        tr
+                            th ID
+                            th Name
+                    tbody
+            .col-1-2
+                h2 Houses
+                table#houses
+                    thead
+                        tr
+                            th ID
+                            th Name
+                    tbody
+            .col-1-6
+                h2 Edit pawn
+                form#editPawn
+                    label(for='pawnid') ID
+                    input(id='pawnid',type='text' placeholder='5774abf6c134a9575afbb00e', name='pawnid')
+                    br
+                    label(for='name') Name
+                    input(id='name',type='text' placeholder='Jon Snow', name='name')
+                    br
+                    label(for='quote') Quote
+                    input(id='quote',type='text' placeholder='And now my watch has ended', name='quote')
+                    br
+                    label(for='houseOptions') House
+                    select(id='houseOptions' class='houseOptions' name='house')
+                    br
+                    label(for='locationOptions') Location
+                    select(id='locationOptions' class='locationOptions' name='location')
+                    br
+                    label(for='status') Status
+                    select(id='status' name="status")
+                        option(disabled selected value="")
+                        option(value="Dead") Dead
+                        option(value="Alive") Alive
+                        option(value="Imprisoned") Imprisoned
+                        option(value="UnDead") Undead
+                    br
+                    input(type="submit" value="Add")
+            .col-5-6
+                h2 Pawns
+                table#pawns
+                    thead
+                        tr
+                            th ID
+                            th Name
+                            th House
+                            th Quote
+                            th Location
+                    tbody

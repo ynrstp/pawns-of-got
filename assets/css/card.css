@@ -1,0 +1,102 @@
+@keyframes cardIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    65% {
+        transform: scale(1.10);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.card {
+    width: 95%;
+    margin: 0 auto;
+    height: 360px;
+    background-color: white;
+    border-radius: 4%;
+    box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    animation: cardIn 0.8s 0s;
+    animation-fill-mode: forwards;
+}
+.banner {
+    z-index: 2;
+    position: relative;
+    margin-top: -120px;
+    width: 100%;
+    height: 160px;
+    ;
+    background-size: cover;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+}
+.photo {
+    background-size: cover;
+    z-index: 3;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    top: 70px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.40);
+}
+.photo:hover {
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.80);
+}
+.card ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 45px;
+    width: 90%;
+    margin: 0 auto;
+}
+.name {
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #002141;
+    margin-bottom: 0.8em;
+}
+.quote {
+    font-family: 'Lato';
+    font-size: 1em;
+    font-weight: 300;
+    color: #002141;
+}
+.container {
+    position: relative;
+    margin-bottom: 2em;
+}
+.holder {
+    position: absolute;
+    bottom: 5px;
+    width: 95%;
+}
+.sigil {
+    background-size: cover;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    margin-left: 0.3em;
+}
+.status {
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    float: right;
+    margin-right: 0.3em;
+}
+.card ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 45px;
+}
+.grid {
+    overflow: visible !important;
+}
