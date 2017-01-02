@@ -8,3 +8,7 @@ Uses Jade(pug) as a templating engine and React to render cards to the DOM. Also
 
 To run it locally, you'll need Node to run it, and webpack to bundle app (if you make changes to the React part of the app).
 
+## Contributing
+
+Welcome contributing!
+Please use GitHub's Issues/PRs.
